@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legacy &middot; Thirty Years, Told in Order</title>
+<style>
+:root{
+  --mint:#CFE0D4; --olive:#5D6A2B; --orange:#E4711C; --gold:#EFB02B; --brass:#A98A3D;
+  --brown:#2B1A10; --paper:#F7F1E5; --paper-2:#EFE6D5;
+  --rule:rgba(43,26,16,.16); --ink:#2B1A10; --ink-soft:#6B5644; --brass-t:#836828;
+  --accent:#2B1A10; --band:#2B1A10; --bandfg:#CFE0D4;
+  --actnum:#946510; --wordmark:#EFB02B; --ondark:#EFB02B;
+  --keep:#5D6A2B; --maybe:#A98A3D; --cut:#A84512;
+  --display:"Hoefler Text",Didot,"Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:"Avenir Next",Avenir,Futura,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --mono:"Andale Mono",Menlo,"Courier New",ui-monospace,monospace;
+  --read:"Palatino Linotype",Palatino,"Iowan Old Style",Georgia,serif;
+}
+*{box-sizing:border-box} html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--read);
+ font-size:17px;line-height:1.6;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;
+ opacity:.32;mix-blend-mode:multiply;
+ background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{max-width:1000px;margin:0 auto;padding:0 28px} .narrow{max-width:760px}
+.hero{position:relative;overflow:hidden;background:var(--brown);color:var(--mint);padding:0 0 54px}
+.hero .mark{font-family:var(--display);font-weight:900;color:var(--wordmark);
+ font-size:clamp(7rem,26vw,22rem);line-height:.78;letter-spacing:-.045em;margin:0 0 0 -.06em;
+ padding:.14em 0 0;white-space:nowrap;opacity:.97}
+.hero .tag{font-family:var(--mono);text-transform:uppercase;letter-spacing:.34em;font-size:.66rem;
+ line-height:2.1;color:var(--mint);opacity:.72;margin:18px 0 0;max-width:22em}
+.hero .divider{height:1px;background:rgba(207,224,212,.22);margin:38px 0 30px}
+.doc-kicker{font-family:var(--mono);text-transform:uppercase;letter-spacing:.3em;
+ font-size:.62rem;color:var(--ondark);margin:0 0 14px}
+.doc-title{font-family:var(--display);font-weight:900;font-size:clamp(2.3rem,6vw,4.2rem);
+ line-height:.98;letter-spacing:-.02em;margin:0;color:var(--mint)}
+.doc-title small{display:block;font-family:var(--sans);font-weight:600;
+ font-size:clamp(.8rem,1.7vw,1.05rem);letter-spacing:.02em;color:var(--ondark);margin-top:14px}
+.doc-sub{font-family:var(--sans);font-size:1rem;line-height:1.65;
+ color:rgba(207,224,212,.74);margin:16px 0 0;max-width:44em}
+.meta{background:var(--band);color:var(--bandfg);padding:30px 0}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(126px,1fr));gap:22px}
+.meta-item .k{font-family:var(--mono);text-transform:uppercase;letter-spacing:.22em;
+ font-size:.56rem;opacity:.72;display:block;margin-bottom:7px}
+.meta-item .v{font-family:var(--display);font-weight:900;font-size:1.7rem;line-height:1;display:block}
+.meta-item .v small{font-family:var(--sans);font-weight:600;font-size:.7rem;opacity:.68;
+ display:block;margin-top:6px;line-height:1.4}
+section.major{padding:56px 0 10px;border-top:1px solid var(--rule)}
+section.major:first-of-type{border-top:0}
+.sec-major{font-family:var(--display);font-weight:900;font-size:clamp(1.8rem,4.6vw,2.9rem);
+ line-height:1.03;letter-spacing:-.02em;margin:0 0 26px}
+h3.sec{font-family:var(--display);font-weight:900;font-size:clamp(1.4rem,3.4vw,2rem);
+ line-height:1.08;margin:44px 0 18px}
+h4.sub{font-family:var(--display);font-weight:900;font-size:1.22rem;line-height:1.2;
+ margin:34px 0 12px}
+h5.subsub{font-family:var(--mono);text-transform:uppercase;letter-spacing:.2em;
+ font-size:.62rem;color:var(--brass-t);margin:28px 0 10px}
+.pr{font-family:var(--sans);font-size:.97rem;line-height:1.72;margin:0 0 16px;max-width:60em}
+.pr b,.lst b{font-weight:700}
+.src{font-family:var(--mono);font-size:.68rem;letter-spacing:.04em;color:var(--brass-t);
+ background:rgba(43,26,16,.05);border:1px solid var(--rule);border-radius:2px;padding:1px 5px;
+ white-space:nowrap}
+.arrow{color:var(--accent);font-weight:700;padding-right:.2em}
+@media (prefers-color-scheme:dark){.arrow{color:var(--ondark)}}
+.lst{font-family:var(--sans);font-size:.95rem;line-height:1.68;margin:0 0 20px;padding-left:0;
+ list-style:none;display:grid;gap:13px;max-width:60em}
+.lst li{padding-left:18px;border-left:2px solid var(--accent)}
+@media (prefers-color-scheme:dark){.lst li{border-left-color:var(--ondark)}}
+.lst.check{gap:2px}
+.lst.check li{border-left:0;padding-left:0}
+.lst.check label{display:flex;gap:12px;align-items:flex-start;cursor:pointer;
+ padding:9px 12px;border-radius:3px;border:1px solid transparent}
+.lst.check label:hover{background:var(--paper-2);border-color:var(--rule)}
+.lst.check input{appearance:none;-webkit-appearance:none;flex:0 0 auto;
+ width:17px;height:17px;margin:2px 0 0;border:2px solid var(--brass-t);border-radius:3px;
+ cursor:pointer;position:relative;background:transparent}
+.lst.check input:checked{background:var(--keep);border-color:var(--keep)}
+.lst.check input:checked::after{content:"";position:absolute;left:4px;top:0;
+ width:6px;height:11px;border:solid #F7F1E5;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.lst.check input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.lst.check li.done span{opacity:.5;text-decoration:line-through}
+.bar .cnt.lbl{opacity:.5} .bar .d b{color:#9FB05C}
+@media print{.lst.check input{-webkit-appearance:checkbox;appearance:checkbox}
+ .lst.check li.done span{opacity:1;text-decoration:none}}
+.lst.num{counter-reset:n}
+.lst.num li{border-left:0;padding-left:42px;position:relative}
+.lst.num li::before{counter-increment:n;content:counter(n);position:absolute;left:0;top:-.14em;
+ font-family:var(--display);font-weight:900;font-size:1.5rem;color:var(--actnum)}
+.callout{margin:26px 0;padding:20px 24px;background:var(--paper-2);border:1px solid var(--rule);
+ border-left:3px solid var(--accent);font-family:var(--sans);font-size:.93rem;line-height:1.7;
+ max-width:60em}
+@media (prefers-color-scheme:dark){.callout{border-left-color:var(--ondark)}}
+.tw{overflow-x:auto;margin:0 0 26px;border:1px solid var(--rule);background:var(--paper-2)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:.86rem}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+/* th sits on rgba(43,26,16,.04) over --paper-2, which composites to rgb(231,222,205).
+   --brass-t #836828 measures only 3.96:1 there and this is 9px bold uppercase, so it
+   needs the full 4.5. #775E24 measures 4.6:1. Dark mode's #C9A45E is already 6.3:1. */
+th{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:.62rem;
+ color:#775E24;background:rgba(43,26,16,.04);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+.rank{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;
+ padding:26px 0;border-bottom:1px solid var(--rule)}
+.rank-no{font-family:var(--display);font-weight:900;font-size:clamp(2.8rem,7vw,4.4rem);
+ line-height:.78;letter-spacing:-.04em;color:var(--actnum)}
+.rank-who{font-family:var(--display);font-weight:900;font-size:clamp(1.3rem,3.2vw,1.9rem);
+ line-height:1;margin:.1em 0 0}
+.rank-yr{font-family:var(--mono);font-weight:400;font-size:.72rem;letter-spacing:.14em;
+ color:var(--ink-soft);margin-left:12px;vertical-align:.28em}
+.rank-verdict{font-family:var(--sans);font-size:.92rem;line-height:1.6;color:var(--ink-soft);
+ margin:9px 0 0}
+.rank-verdict b{color:var(--ink)}
+.iv-head{margin:52px 0 24px;padding:4px 0 4px 18px;border-left:5px solid var(--accent)}
+.iv-name{font-family:var(--display);font-weight:900;font-size:clamp(1.6rem,4vw,2.3rem);
+ line-height:1;margin:0}
+.iv-yr{font-family:var(--mono);font-weight:400;font-size:.76rem;letter-spacing:.16em;
+ color:var(--ink-soft);margin-left:14px;vertical-align:.3em}
+.iv-head .src{margin-top:10px;display:inline-block}
+.hl{margin:0 0 20px;padding:16px 18px;border-left:3px solid var(--rule);
+ background:var(--paper-2);max-width:62em;transition:opacity .15s}
+.hl-top{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:9px}
+.hl-id{font-family:var(--mono);font-weight:700;text-transform:uppercase;letter-spacing:.16em;
+ font-size:.68rem}
+.tc{font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;color:var(--ink-soft)}
+.hl-who{font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;font-size:.58rem;
+ color:var(--bandfg);background:var(--accent);padding:2px 7px;border-radius:2px}
+@media (prefers-color-scheme:dark){.hl-who{background:var(--ondark);color:#241509}}
+.bd{font-size:.7rem;letter-spacing:.08em;cursor:help}
+.bd-star{color:var(--gold)} .bd-warn{color:var(--orange);font-weight:700}
+.hl-head{font-family:var(--display);font-weight:900;font-size:1.1rem;line-height:1.28;margin:0 0 8px}
+.hl-body{font-family:var(--sans);font-size:.94rem;line-height:1.7;margin:0}
+.hl-body em{font-style:italic;color:var(--ink)}
+.hl-sub{font-family:var(--sans);font-style:italic;font-size:.86rem;line-height:1.65;
+ color:var(--ink-soft);margin:11px 0 0;padding-left:14px;border-left:2px solid var(--rule)}
+.hl-mark{margin-left:auto;display:inline-flex;gap:0;border:1px solid var(--rule);border-radius:3px;
+ overflow:hidden;flex:0 0 auto}
+.hl-mark button{font-family:var(--mono);text-transform:uppercase;letter-spacing:.12em;
+ font-size:.55rem;padding:5px 9px;border:0;background:transparent;color:var(--ink-soft);
+ cursor:pointer;border-right:1px solid var(--rule)}
+.hl-mark button:last-child{border-right:0}
+.hl-mark button:hover{background:rgba(43,26,16,.07)}
+.hl[data-v="keep"]{border-left-color:var(--keep)!important;
+ box-shadow:inset 0 0 0 1px rgba(93,106,43,.3)}
+.hl[data-v="maybe"]{border-left-color:var(--maybe)!important}
+.hl[data-v="cut"]{opacity:.42}
+.hl[data-v="keep"] .hl-mark button[data-v="keep"]{background:var(--keep);color:#F7F1E5}
+.hl[data-v="maybe"] .hl-mark button[data-v="maybe"]{background:var(--maybe);color:#2B1A10}
+.hl[data-v="cut"] .hl-mark button[data-v="cut"]{background:var(--cut);color:#F7F1E5}
+.rule{border:0;border-top:1px solid var(--rule);margin:40px 0}
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:500;background:var(--brown);
+ color:var(--mint);border-top:1px solid rgba(207,224,212,.2)}
+.bar .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding:11px 28px}
+.bar .cnt{font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;font-size:.58rem;
+ opacity:.8}
+.bar .cnt b{font-family:var(--display);font-size:1.05rem;letter-spacing:0;margin-right:5px}
+.bar .k b{color:#9FB05C} .bar .m b{color:var(--gold)} .bar .c b{color:var(--orange)}
+.bar .sp{margin-left:auto;display:flex;gap:9px}
+.bar button{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:.56rem;
+ padding:7px 13px;border:1px solid rgba(207,224,212,.35);background:transparent;color:var(--mint);
+ cursor:pointer;border-radius:2px}
+.bar button:hover{background:rgba(207,224,212,.12)}
+.bar button.primary{background:var(--ondark);color:#241509;border-color:var(--ondark);font-weight:700}
+body{padding-bottom:66px}
+.psalm{background:var(--band);color:var(--bandfg);padding:70px 0}
+.psalm-body{font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;
+ font-size:.74rem;line-height:2.3;text-align:justify;margin:0}
+.psalm-ref{font-family:var(--mono);text-transform:uppercase;letter-spacing:.3em;
+ font-size:.58rem;margin:26px 0 0;opacity:.66}
+footer{background:var(--brown);color:rgba(207,224,212,.5);padding:34px 0 40px;
+ font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+.s-jane{border-left-color:#2B1A10} .s-jane .hl-id{color:#2B1A10} .sw-b-jane{border-left-color:#2B1A10}
+@media (prefers-color-scheme:dark){/* brown 11.8:1 on --paper-2 */.s-jane{border-left-color:var(--mint)}.s-jane .hl-id{color:var(--mint)}.sw-b-jane{border-left-color:var(--mint)}}
+.s-ingrid{border-left-color:#5D6A2B} .s-ingrid .hl-id{color:#4E5A24} .sw-b-ingrid{border-left-color:#5D6A2B}
+@media (prefers-color-scheme:dark){/* olive 6.9:1 on --paper-2 */.s-ingrid{border-left-color:#9FB05C}.s-ingrid .hl-id{color:#9FB05C}.sw-b-ingrid{border-left-color:#9FB05C}}
+.s-lakendra{border-left-color:#EFB02B}/* gold 4.6:1 on --paper-2 */ .s-lakendra .hl-id{color:#8A5E0F} .sw-b-lakendra{border-left-color:#EFB02B}
+@media (prefers-color-scheme:dark){/* gold 8.5:1 on --paper-2 */.s-lakendra{border-left-color:#EFB02B}.s-lakendra .hl-id{color:#EFB02B}.sw-b-lakendra{border-left-color:#EFB02B}}
+.s-david{border-left-color:#E4711C} .s-david .hl-id{color:#A84512} .sw-b-david{border-left-color:#E4711C}
+@media (prefers-color-scheme:dark){/* orange 5.2:1 on --paper-2 */.s-david{border-left-color:#E4711C}.s-david .hl-id{color:#E4711C}.sw-b-david{border-left-color:#E4711C}}
+.s-marshall{border-left-color:#A98A3D}/* brass 4.6:1 on --paper-2 */ .s-marshall .hl-id{color:#7C6326} .sw-b-marshall{border-left-color:#A98A3D}
+@media (prefers-color-scheme:dark){/* brass 5.0:1 on --paper-2 */.s-marshall{border-left-color:#A98A3D}.s-marshall .hl-id{color:#A98A3D}.sw-b-marshall{border-left-color:#A98A3D}}
+@media (max-width:760px){
+ body{font-size:16px} .wrap{padding:0 20px}
+ .rank{grid-template-columns:1fr;gap:4px} .rank-no{font-size:2.6rem}
+ .hl-mark{margin-left:0;width:100%} .hl-mark button{flex:1}
+ .psalm-body{text-align:left;letter-spacing:.1em}
+ .bar .wrap{padding:9px 20px;gap:11px} .bar .sp{width:100%;margin-left:0}
+ .bar .sp button{flex:1}}
+@media (prefers-color-scheme:dark){
+ :root{--paper:#241509;--paper-2:#2E1C0F;--ink:#EFE4D2;--ink-soft:#B49E84;
+  --rule:rgba(239,228,210,.16);--brass-t:#C9A45E;--brown:#140E07;--band:#4A3520;
+  /* the cream-tuned --actnum #946510 only reaches 3.5:1 here: fine for the big
+     numerals, murky for the small ones. #C9A45E measures 7.6:1 on --paper. */
+  --actnum:#C9A45E;}
+ body::after{mix-blend-mode:overlay;opacity:.2}
+ .src{background:rgba(239,228,210,.07)}
+ th{background:rgba(239,228,210,.04);color:var(--brass-t)}
+ .hl-mark button:hover{background:rgba(239,228,210,.09)}}
+@media print{
+ body{background:#fff;color:#000;font-size:10.5pt;padding-bottom:0} body::after{display:none}
+ .hero,footer{background:#fff!important;color:#000!important}
+ .hero .mark{color:#000;font-size:4rem}
+ .hero .tag,.doc-title,.doc-sub{color:#000!important}
+ .meta,.psalm{background:#fff;border-top:1px solid #000;border-bottom:1px solid #000;color:#000}
+ .bar{display:none} .hl-mark{display:none}
+ .hl{page-break-inside:avoid;background:#fff;border-left:2px solid #000}
+ .rank,.iv-head{page-break-inside:avoid}
+ section.major{padding:18px 0} .rank-no,.lst.num li::before{color:#000}
+ .hl[data-v="cut"]{opacity:1}}
+</style>
+<style>
+/* the Don page's CSS has no anchor rule; default blue reads wrong on cream */
+a{color:var(--brass-t);text-decoration:underline;text-decoration-thickness:1px;
+  text-underline-offset:2px}
+a:hover{color:var(--orange)}
+@media (prefers-color-scheme:dark){a{color:var(--gold)}}
+@media print{a{color:inherit;text-decoration:none}}
+</style>
+</head><body>
+
+<header class="hero"><div class="wrap">
+<h1 class="mark">legacy</h1>
+<p class="tag">Celebrating God&rsquo;s faithfulness since 1996.</p>
+<div class="divider"></div>
+<p class="doc-kicker">30th Anniversary documentary</p>
+<h2 class="doc-title">Thirty Years, Told in Order<small>Documentary structure · thirteen interviews + the 30 Stories corpus · working draft, updated 25 September 2026</small></h2>
+<p class="doc-sub">Four new interviews fill the 2002–2017 stretch the first draft called thin, and one hands the film its ending: the church that sent John and Leslie is joining the family.</p>
+</div></header>
+
+<div class="meta"><div class="wrap meta-grid">
+<div class="meta-item"><span class="k">Interviews</span><span class="v">13<small>about 11 h of film </small></span></div><div class="meta-item"><span class="k"> New this week</span><span class="v">4<small>Bartlett · Meneses · VanBlaricom · Wright </small></span></div><div class="meta-item"><span class="k"> Movements</span><span class="v">5<small>1993–2027 </small></span></div><div class="meta-item"><span class="k"> Verdict</span><span class="v">Reshape<small>and now testable</small></span></div>
+</div></div>
+
+<section class="major"><div class="wrap">
+<p class="pr">For the <b>30th Anniversary documentary</b> &mdash; <span class="src">30th Anniversary Script.html</span>. Built from the thirteen sit-down interviews transcribed so far (Don Matheny, Pete &amp; Kristi Sciacchetano, Rob Carter, Johnny Hill, Dan Lord, Wayne &amp; Classy Francis, Emy Vazquez, Josh &amp; Jessica Fuentes, Marco &amp; Tiina Geraci, and, new this week, Adam Bartlett, Mundo Meneses, Parker VanBlaricom and Adrian &amp; Leigh Wright &mdash; about 11 hours of film) plus the six 30 Stories content assessments, which hold thirty more voices, one per year.</p>
+<p class="pr"><b>What changed since 17 September.</b> Four interviews landed exactly where the first draft said the film was thinnest, 2002&ndash;2017, and one of them hands the film its ending. Adam Bartlett dates the building story (Germantown Parkway bought around 2007, the Collierville YMCA, Houston Levee opened February 2010, the auditorium begun in 2016, the Global Hub breaking ground in August 2026). Mundo Meneses carries Outreach (the first Serve Truck bought from the stage, Read to Lead, the COVID food lines). Parker VanBlaricom is the Axis kid of 2005 who has run the Axis Conference since 2018. The Wrights bring South Africa and the Bible School &mdash; the two things the script&rsquo;s Future section asks for clips of.</p>
+<p class="pr"><b>The short version.</b> Go chronological; what&rsquo;s on film now covers all thirty years. Its shape is a rhyme the script does not yet use &mdash; <b>the 2020s are the 1990s again</b> &mdash; and, new this week, <b>a spine that runs the whole length of the film.</b> After Nairobi, John and Leslie <em>&ldquo;felt like the Lord told them that he would replace them 200 times over on the mission field&rdquo;</em> (MM 076). Thirty years later the church that sent them is joining the family: <em>&ldquo;Nairobi Lighthouse Church that sent Pastor John and Pastor Leslie to Memphis&hellip; They&rsquo;re becoming a part of the Life Church family&rdquo;</em> (MM 120&ndash;121). The story can open in Nairobi and close in Nairobi. <b>Five movements, in order, each owning one or two values.</b> The bookends stay: the Intro, John&rsquo;s VO over a scene shot for it (John and Leslie entering the building, the green room, the team, the morning&rsquo;s service flows), and the Future sit-down. So the film starts in the present and the story goes back to Nairobi from there. The &ldquo;Features&rdquo; block shrinks to a short Identity bridge (the pressure test&rsquo;s reshape, below).</p>
+<p class="pr">Two cautions. <b>The middle is filled &mdash; by staff.</b> Movement III now has six voices, and every one of them worked for the church; the member&rsquo;s-eye view of 2002&ndash;2017 comes only from the 30 Stories witnesses, so pin them. And <b>the founding is still over-served</b> &mdash; Matheny, the Sciacchetanos and Rob Carter all cover 1996&ndash;2002 well; hold Movements I&ndash;II to about a third of the film.</p>
+<hr class="rule">
+</div></section>
+<section class="major"><div class="wrap"><h2 class="sec-major">What we have</h2>
+<div class="tw"><table><thead><tr><th>#</th><th>Interview</th><th>Shot</th><th>Era they carry</th><th>Script beat served</th><th>Film</th><th>The line</th></tr></thead><tbody><tr><td>1</td><td><b>Don Matheny</b></td><td>Nairobi · Jul</td><td>1993&ndash;96 → today</td><td>Nairobi to Memphis</td><td>59 min</td><td><em>&ldquo;we&rsquo;re in Memphis, Tennessee&hellip; Pastor John began to cry on the phone.&rdquo;</em> (064)</td></tr><tr><td>2</td><td><b>Pete &amp; Kristi Sciacchetano</b></td><td>Memphis · Sep</td><td>1976 → launch → today</td><td>The Launch</td><td>36 min</td><td><em>&ldquo;Memphis, that&rsquo;s stupid.&rdquo;</em> (019)</td></tr><tr><td>3</td><td><b>Rob Carter</b></td><td>Memphis · Sep</td><td>early days → 2002 → today</td><td>Breakthrough / Germantown Pkwy</td><td>19 min</td><td><em>&ldquo;no, we&rsquo;re not. We&rsquo;re not reaching far enough.&rdquo;</em> (019)</td></tr><tr><td>4</td><td><b>Johnny Hill</b></td><td>Memphis · Sep</td><td>2005 → today</td><td>Worship · Katrina</td><td>26 min</td><td><em>&ldquo;We create space for God to create moments.&rdquo;</em> (038)</td></tr><tr><td>5</td><td><b>Dan Lord</b></td><td>St. Louis · 18 Aug</td><td>2005&ndash;2018</td><td>Axis Conference</td><td>50 min</td><td><em>&ldquo;I&rsquo;m a leader. I&rsquo;m a champion. I&rsquo;m God&rsquo;s number one.&rdquo;</em> [090]</td></tr><tr><td>6</td><td><b>Wayne &amp; Classy Francis</b></td><td>New York · 20 Aug</td><td>2009 → 2017 → Easter 2020 → 2026</td><td>New York merge · COVID · Diversity</td><td>54 min</td><td><em>&ldquo;this space is your limitation&rdquo;</em> (047)</td></tr><tr><td>7</td><td><b>Emy Vazquez</b></td><td>Fitchburg · 15 Aug</td><td>~2015 → 2020 → 2025</td><td>Expansion: Massachusetts</td><td>56 min</td><td><em>&ldquo;the worst of times and the best of times&rdquo;</em> (036)</td></tr><tr><td>8</td><td><b>Josh &amp; Jessica Fuentes</b></td><td>Santiago · 25 Aug</td><td>25 May 2014 → the Ritz → Chile 2027</td><td>Santiago (first international)</td><td>57 min</td><td><em>&ldquo;Why not the Ritz? The worst thing that they can say is no&rdquo;</em> [027]</td></tr><tr><td>9</td><td><b>Marco &amp; Tiina Geraci</b></td><td>Florence · Sep</td><td>Jan 2022 → 2026</td><td>Expansion: Italy</td><td>58 min</td><td><em>&ldquo;if we don&rsquo;t quit, we&rsquo;ll see God&rsquo;s glory.&rdquo;</em> [031]</td></tr><tr><td>10</td><td><b>Adam Bartlett</b></td><td>Memphis · 22 Sep</td><td>2007 → Global Hub 2027</td><td>Going Multi-Site · Houston Levee · Future</td><td>52 min</td><td><em>&ldquo;this auditorium is a dream come true, but it&rsquo;s not the dream.&rdquo;</em> [116&ndash;117]</td></tr><tr><td>11</td><td><b>Mundo Meneses</b></td><td>Memphis</td><td>pre-launch → Serve Trucks 2011 → Nairobi joining</td><td>Serve Trucks · Outreach · Missions</td><td>60 min</td><td><em>&ldquo;he would replace them 200 times over on the mission field&rdquo;</em> [076]</td></tr><tr><td>12</td><td><b>Parker VanBlaricom</b></td><td>Memphis · Sep</td><td>Aug 2000 → Axis 2005 → conference lead 2018</td><td>Axis Conference · Young People</td><td>52 min</td><td><em>&ldquo;young people aren&rsquo;t in the background of our church, they&rsquo;re the backbone&rdquo;</em> [111]</td></tr><tr><td>13</td><td><b>Adrian &amp; Leigh Wright</b></td><td>Johannesburg · 14 Sep</td><td>2015 → 3 Mar 2024 → Bible School</td><td>Crazy Expansion: South Africa · Bible School</td><td>89 min</td><td><em>&ldquo;God did the same miracle twice. Once with Lee and then once with the church&rdquo;</em> [136]</td></tr></tbody></table></div>
+<p class="pr">Every number in parentheses or brackets is a Premiere block in that interview&rsquo;s merged transcript (<span class="src">Transcripts/&lt;Name&gt; - Merged Transcript.md</span>), so it pastes straight into the Find workflow. Quotes are the Whisper wording; read the block before a line goes on a lower third.</p>
+<blockquote class="callout"><p class="pr"><b>Who is not on film yet, and which beats it costs.</b> <b>Pastor John &amp; Leslie</b> (8 October &mdash; the spine; see the brief below). <b>Brian Pitre</b> (self-interview next week: the weekly TV program 2008&ndash;2018, the one-week flip to livestream in March 2020, and the daily livestream updates John hosted). <b>Nashville, DC and the prison locations</b> &mdash; short pickups planned with Shaston &amp; Kendall Hunter, Andreas &amp; Jerrica Nunley and Matt Anzivino (question cards built). <b>Dino Rizzo</b> (the early years, the lunch, the encouragement in the tough season). <b>Leslie on Zoe</b> &mdash; Johnny and the Geracis mention it, nobody tells it. Nobody on film mentions the <b>40-day fast or the billboard</b>; if those beats stay, they are John&rsquo;s to tell.</p></blockquote>
+<hr class="rule">
+</div></section>
+<section class="major"><div class="wrap"><h2 class="sec-major">The chronology the film actually tells</h2>
+<p class="pr">Sources: <b>DM</b> Matheny · <b>PK</b> Sciacchetano · <b>RC</b> Carter · <b>JH</b> Hill · <b>DL</b> Lord · <b>WC</b> Francis · <b>EV</b> Vazquez · <b>JJ</b> Fuentes · <b>MT</b> Geraci · <b>AB</b> Bartlett · <b>MM</b> Meneses · <b>PV</b> VanBlaricom · <b>AL</b> Wright · <b>30S</b> a 30 Stories interview (year = that person&rsquo;s arrival). Dates the subjects state themselves are plain; dates from Brian&rsquo;s questions, the cards or the plans are marked <em>(not on film)</em>. Confirmed by Brian, 25 Sep: launch Sunday 10 Nov 1996; Germantown Parkway leased first, bought ~2007; Dan and Paige met John and Leslie in 2004; Highland opened Sep 2014; the first Serve Truck announced and bought in 2011; Santiago launched on John&rsquo;s birthday. Still for 8 Oct: the Nairobi dates, launch-Sunday attendance, the YMCA years.</p>
+<div class="tw"><table><thead><tr><th>When</th><th>What happened</th><th>Who has it</th></tr></thead><tbody><tr><td>1976</td><td>Pete, 10, meets John, 9, shooting fireworks the day after the 4th of July in Louisiana; Kristi and Leslie are schoolmates</td><td>PK 001&ndash;005</td></tr><tr><td>~1993</td><td>John, &ldquo;just out of college,&rdquo; on a Baton Rouge team to Nairobi; comes back and asks to stay &mdash; <em>&ldquo;Pastor, I just want to come. And I want to serve.&rdquo;</em></td><td>DM 002&ndash;005, 100</td></tr><tr><td>~1993&ndash;96</td><td>John and Leslie on staff at Nairobi Lighthouse ~3½ years: Breakthrough (now City Lights), Leslie&rsquo;s Kids House and calligraphy, John on worship; hotel ballroom → City Stadium, ~3,000 people, forty-plus tribes</td><td>DM 009&ndash;018, 032&ndash;034</td></tr><tr><td>spring 1996</td><td>The living room &mdash; <em>&ldquo;we really know that we are not called to be long-term missionaries like you&rdquo;</em>; the retreat with Pastor Jim Clark; the City Stadium send-off &mdash; <em>&ldquo;like a ball game&rdquo;</em></td><td>DM 036&ndash;046, 057&ndash;060</td></tr><tr><td>after Nairobi</td><td>The word: God <em>&ldquo;would replace them 200 times over on the mission field&rdquo;</em></td><td>MM 076</td></tr><tr><td>1996 →</td><td>Nairobi Lighthouse&rsquo;s support carries John and Leslie through the search for a city and the years after launch &mdash; <em>&ldquo;our church would be the first to support them wherever the Lord would direct them&rdquo;</em>. John never held an outside job (Brian, 25 Sep): the script&rsquo;s Dino beat, <em>&ldquo;Pastor John able to quit his job,&rdquo;</em> is wrong</td><td>DM 047, 057</td></tr><tr><td>summer 1996</td><td>The landline call &mdash; <em>&ldquo;we have found the city&rdquo;</em>; both men cry; Psalm 126:6; Dr. King</td><td>DM 062&ndash;066, 118&ndash;121</td></tr><tr><td>autumn 1996</td><td>Small groups; seven people on the launch team</td><td>PK 014; 30S 1996</td></tr><tr><td>10 Nov 1996</td><td>Launch Sunday at the Home Builders Association: over 100 (Pete) / 150&ndash;200 (Kristi); then attendance <em>&ldquo;cut in half&rdquo;</em> for a while</td><td>PK 021&ndash;023, 032&ndash;033</td></tr><tr><td>1997&ndash;2001</td><td>Church in a box: TVs up backyard ramps, nursery in the kitchen, hot-tub baptisms; Pete and Kristi move &ldquo;two Marches later&rdquo;</td><td>PK 024&ndash;046, 063; RC 002&ndash;003</td></tr><tr><td>2000</td><td>40-day fast, billboard</td><td><em>script only &mdash; no interview</em></td></tr><tr><td>Aug 2000</td><td>The VanBlaricoms&rsquo; first Sunday; Parker&rsquo;s dad answers John&rsquo;s altar call</td><td>PV 004&ndash;013</td></tr><tr><td>2002</td><td>The derelict Mega Market on North Germantown Parkway &mdash; <em>&ldquo;coolers and just junk everywhere&rdquo;</em>; move-in on a lease (bought ~2007, AB 019), Kids Life explodes</td><td>RC 008&ndash;017; 30S 2001&ndash;02</td></tr><tr><td>2003&ndash;04</td><td>Meneses arrive; outreach becomes identity; Axis begins for 7th&ndash;12th grade (2004)</td><td>30S 2003; PV 021</td></tr><tr><td>2004&ndash;05</td><td>Dan and Paige meet John and Leslie (2004), Huey&rsquo;s, <em>&ldquo;move here and help us&rdquo;</em>; church &ldquo;six or 700 people&rdquo;; Axis 30&ndash;40</td><td>DL 003&ndash;017</td></tr><tr><td>2005 · Katrina</td><td>The hinge: Dan&rsquo;s first assignment is the relief &mdash; <em>&ldquo;if you&rsquo;re a leader, you&rsquo;ll figure it out&rdquo;</em>; Johnny hears John on the radio and walks in; Parker meets Dan in Mississippi; Parker&rsquo;s first mission trip (LA Dream Center)</td><td>DL 012&ndash;014; JH 002&ndash;005; PV 022&ndash;033</td></tr><tr><td>Jun 2007</td><td>Adam Bartlett&rsquo;s first Sunday; the church has <em>&ldquo;just purchased our Germantown Parkway location, so we were actually owners and not renters&rdquo;</em></td><td>AB 005, 019</td></tr><tr><td>2008</td><td>Adam on staff (April); his first project, expanding Germantown Parkway, dies when John prays and calls a pastor friend &mdash; <em>&ldquo;I know for a fact that we need to get out of this location&rdquo;</em></td><td>AB 023&ndash;028</td></tr><tr><td>2008&ndash;18</td><td>The weekly TV program (host John Siebeling)</td><td><em>Brian&rsquo;s self-interview, next week; ratings 2014&ndash;17 in <span class="src">TV Program History/</span></em></td></tr><tr><td>~2008&ndash;09</td><td>Collierville YMCA &mdash; the first extra location: a rented truck every Saturday, baptisms in the pool, Adam as location pastor ~1 year</td><td>AB 065&ndash;072</td></tr><tr><td>2009</td><td>Forest Hill Community Church takes the YMCA site, the church takes Houston Levee (<em>&ldquo;a miracle&rdquo;</em>); first Axis Conference, ~200&ndash;250 students, Matthew Barnett, no budget</td><td>AB 074&ndash;078; DL 040&ndash;053; PV 063&ndash;069</td></tr><tr><td>Feb 2010</td><td>Houston Levee opens with 600&ndash;700 &mdash; a second hub</td><td>AB 079&ndash;080</td></tr><tr><td>2010&ndash;15</td><td>Dwayne&rsquo;s icy Sunday (2010); Kaymen saved at Axis Conference (2014); tribes begin (2015, 300&ndash;400 students, two staff)</td><td>30S; PV 145&ndash;150</td></tr><tr><td>2011</td><td>The first Serve Truck: John&rsquo;s conversation with Matthew Barnett; John and Leslie announce it from the stage; ~$75,000 that weekend; ~240 kids, 10&ndash;12 schools</td><td>MM 050&ndash;057, 074&ndash;075</td></tr><tr><td>~2012&ndash;13</td><td>The roundtable in Chile; Pastor Robert Barriger calls Josh &mdash; John <em>&ldquo;had felt something for Chile&rdquo;</em>; the honeymoon re-routed to Memphis; Mundo&rsquo;s team meets the Fuenteses</td><td>JJ 010&ndash;013; MM 089</td></tr><tr><td>25 May 2014</td><td>The Life Church Santiago launches &mdash; 13 on the team, ~200 in the room, on John&rsquo;s birthday</td><td>JJ 017&ndash;019</td></tr><tr><td>Sep 2014</td><td>Highland opens in the former Victory University building</td><td>AB 091&ndash;093</td></tr><tr><td>2016&ndash;17</td><td>The Houston Levee auditorium: a 2,000-seat room talked about for a decade, 52,000 sq ft begun in 2016, dedicated with Chris Hodges; Axis Conference moves in (Cordova&rsquo;s bleachers &mdash; <em>&ldquo;Dan, I don&rsquo;t think this is safe&rdquo;</em>)</td><td>AB 099&ndash;117; DL 060&ndash;068</td></tr><tr><td>Apr 2017</td><td>Wayne and Classy meet John and Leslie at ARC; <em>&ldquo;like a Beyoncé fan&rdquo;</em></td><td>WC 020&ndash;026</td></tr><tr><td>2018</td><td>Dan leaves; Parker handed Axis over coffee &mdash; <em>&ldquo;Here&rsquo;s the keys. And good luck.&rdquo;</em>; conference ~1,200 students</td><td>DL 098, 108; PV 047&ndash;049, 103</td></tr><tr><td>2019</td><td>Austin Peay merger (outreach and Dream Center hub); Wayne asks John and Leslie to be their pastors</td><td>AB 094; WC 029&ndash;031</td></tr><tr><td>Jan&ndash;Mar 2020</td><td>New York merge announced, building bought in February; in March John, Wayne and Mundo are in Santiago the weekend the world shuts</td><td>WC 051&ndash;066; JJ 039</td></tr><tr><td>Mar&ndash;Apr 2020</td><td>Memphis goes from in-person to all-livestream in a week; John&rsquo;s daily livestream updates with guests on Zoom; drive-through food lines &mdash; <em>&ldquo;when things get dark, the church shines&rdquo;</em>; New York launches online on Easter</td><td><em>Brian&rsquo;s self-interview</em>; MM 022&ndash;030; WC 057&ndash;070</td></tr><tr><td>2020&ndash;21</td><td>Massachusetts: Emy&rsquo;s dream → the FaceTime → The Life Church Massachusetts; Mamaroneck rezoned over Zoom</td><td>EV 004&ndash;012, 057&ndash;064; AB 120&ndash;130</td></tr><tr><td>Jan 2022</td><td>Florence: first service in the Limonaia, ~90 people, seven saved</td><td>MT 029&ndash;055</td></tr><tr><td>~2022&ndash;23</td><td>The Wrights meet Marco in Florence, then John in Memphis; the airport-passageway conversation; <em>&ldquo;I don&rsquo;t think it&rsquo;s us&rdquo;</em>; the Rosemary Beach retreat; <em>&ldquo;how quickly can we do this?&rdquo;</em></td><td>AL 065&ndash;095</td></tr><tr><td>3 Mar 2024</td><td>The Life Church South Africa&rsquo;s first Sunday; ~30% growth a year since</td><td>AL 106&ndash;120</td></tr><tr><td>Jun 2024</td><td>Nashville: John hands Adrian one line of a ten-point mandate &mdash; the Life Leadership Bible School</td><td>AL 148&ndash;152</td></tr><tr><td>Oct 2024</td><td>Florence English service (226 across two services); Leominster eviction notice</td><td>MT 067&ndash;069; EV 034</td></tr><tr><td>Feb 2025</td><td>Fitchburg: a $2.5M building instead of a $6M rebuild; Emy&rsquo;s cancer the same season</td><td>EV 028&ndash;040; AB 132&ndash;136</td></tr><tr><td>2026</td><td>Easter: New York 5,000 over nine services; Axis Conference sells out with 500+ volunteers; Bible School year one &mdash; 400 students, 11 countries; Global Hub breaks ground (Aug); Florence counts 2,076 salvations &ldquo;so far&rdquo;; <b>Nairobi Lighthouse joining the family</b></td><td>WC 114&ndash;116; PV 105&ndash;106; AL 155; AB 165; MT 070&ndash;071; MM 120&ndash;122</td></tr><tr><td>2027</td><td>Global Hub completes (~Sep); Chicureo and the rename to The Life Church Chile</td><td>AB 165; JJ 040&ndash;063</td></tr></tbody></table></div>
+<hr class="rule">
+</div></section>
+<section class="major"><div class="wrap"><h2 class="sec-major">The proposal &mdash; five movements</h2>
+<p class="pr">The script&rsquo;s Section II is already chronological. What changes is that each stretch of time gets an owner-value, the six &ldquo;Features&rdquo; move inside the stretch where the film demonstrates them, and the last movement is cut to rhyme with the first two &mdash; and now to close the circle the first one opens.</p>
+<h3 class="sec">Intro · John&rsquo;s voiceover over a morning at the church · ~2 min, as scripted</h3>
+<p class="pr">The script&rsquo;s opening stands, and it now has its picture. <b>Pastor John&rsquo;s voiceover</b> (<em>&ldquo;Did I see all of this when we were just starting out 30 years ago?&rdquo;</em>) plays over <b>a scene shot for it</b>: John and Leslie entering the building and going into the green room, members of the team meeting them there, and the two of them looking over the service flows for the morning. At the script&rsquo;s 1:30 mark the montage of worship and preaching takes over and lands on the card <em>The Life Church: 30 Years of Faithful Ministry</em>.</p>
+<ul class="lst"><li><b>Why it suits the chronological shape:</b> the film opens in the present, inside the &ldquo;all of this&rdquo; John is asked about: the building, the team, a morning&rsquo;s services. Movement I then goes back to Nairobi, and the rest of the film answers his question in order. The Future sit-down brings it back to now.</li><li><b>Shoot note:</b> keep rolling past the service flows, through the script&rsquo;s <em>&ldquo;praying before we walk into service&rdquo;</em> and the walk out. The intro may not need it, but it gives the edit an option for the last shot: after the Future sit-down, John and Leslie walking into the service, closing the frame the intro opens. The script&rsquo;s production timeline pairs this b-roll with the John &amp; Leslie sit-down.</li></ul>
+<h3 class="sec">I · Sent &mdash; Nairobi to Memphis, 1993&ndash;1996 · owns <b>Missions</b> and <b>Vision</b> · ~15%</h3>
+<p class="pr">Born on a mission field, in three voices that never coordinated: Matheny in his living room, Rob Carter calling it <em>&ldquo;bizarre,&rdquo;</em> Kristi holding Leslie&rsquo;s letters from Kenya. Anchor scene: the living-room call to plant (DM 037), the retreat and the stadium send-off (DM 044, 117), the phone call (DM 064 or the clean retake 119), Don&rsquo;s connection to Dr. King (066). <b>New: the word that sets up the whole film</b> &mdash; <em>&ldquo;he would replace them 200 times over on the mission field&rdquo;</em> (MM 076). Mundo tells it second-hand; it must be John&rsquo;s line on 8 October, planted here and paid off in Movement V.</p>
+<ul class="lst"><li><b>Values shown at the origin:</b> Diversity &mdash; forty tribes (DM 032&ndash;034). Creativity &mdash; Leslie&rsquo;s calligraphy (DM 014). Worship and Preaching &mdash; John on guitar, teaching the Word (DM 015).</li><li><b>First story beat after the title card (candidate):</b> Pete, 1976 &mdash; <em>&ldquo;we have been friends ever since, 50 years later&rdquo;</em> (PK 002) &mdash; then Don.</li></ul>
+<h3 class="sec">II · Planted &mdash; seven people and a rented room, 1996&ndash;2002 · owns <b>Community</b> and <b>Generosity</b> · ~20%</h3>
+<p class="pr">Launch Sunday, the crash to half, six years of church in a box, the ask (<em>&ldquo;we could really use you in Memphis,&rdquo;</em> PK 018), the grandmother&rsquo;s verdict (PK 019), John on guitar at the Home Builders (RC 002), the grocery store (RC 011&ndash;017). Rob&rsquo;s <em>&ldquo;we&rsquo;re not reaching far enough&rdquo;</em> (019) is the thesis line of the film and lands here, the first time the church over-reached on purpose. Parker&rsquo;s family walking in during an altar call in August 2000 (PV 008&ndash;013) is the member&rsquo;s-eye picture of these years.</p>
+<ul class="lst"><li><b>Values shown:</b> Community &mdash; <em>&ldquo;just a small group of people coming together&rdquo;</em> (PK 023). Generosity &mdash; <em>&ldquo;you can&rsquo;t out give God&rdquo;</em> (RC 016). Diversity &mdash; <em>&ldquo;people from all walks of life, all races&rdquo;</em> (RC 017).</li><li><b>30 Stories witnesses pinned:</b> Lisa (1996), Steve (1998), Jane (1999), the VanBlaricoms (2000), the Sullivans (2002).</li><li><b>Script beats absorbed:</b> The Launch · The Early Years (Dino &mdash; missing; drop <em>&ldquo;Pastor John able to quit his job&rdquo;</em> &mdash; he never had one; Nairobi supported them, DM 047, 057) · Breakthrough 2000 (fast and billboard &mdash; John&rsquo;s) · Germantown Parkway 2002.</li></ul>
+<h3 class="sec">III · Multiplied &mdash; the city and the next generation, 2002&ndash;2017 · owns <b>Outreach</b>, <b>Young People</b>, <b>Worship</b> · ~25%</h3>
+<p class="pr">No longer the thin middle &mdash; now the fullest movement, and the risk flips to crowding. Katrina is the doorway: three future leaders arrive through one storm &mdash; Dan handed the relief with no chainsaw (DL 013), Johnny hearing John on the radio (JH 002&ndash;003), Parker meeting Dan on the Mississippi coast (PV 030&ndash;033). Then four threads, each with one owner:</p>
+<ul class="lst"><li><b>Young People (Dan → Parker):</b> thirty kids to a sold-out conference. Dan founds the culture (the chant, DL 090; <em>&ldquo;I want a next gen revolution,&rdquo;</em> DL 079); Parker is the proof it worked &mdash; the 7th grader of 2005 handed the keys at Starbucks in 2018 (PV 047&ndash;049), 200 students in 2009 to over 2,000 by 2022 (PV 103&ndash;105). Kaymen (30S 2014) is the member&rsquo;s version.</li><li><b>Outreach (Mundo):</b> <em>&ldquo;not only have church, but be the church&rdquo;</em> (MM 002) &mdash; red bags to Read to Lead (MM 013&ndash;017, 031&ndash;033, 036&ndash;038), and the scene: John and Leslie standing up one Sunday to buy the first Serve Truck, $75,000 by the end of the weekend (MM 052, 074&ndash;075).</li><li><b>Buildings (Adam):</b> the whole multi-site gap is closed. Owning Germantown Parkway (AB 019) → John&rsquo;s prayer and phone call &mdash; <em>&ldquo;we need to get out of this location&rdquo;</em> (AB 028) → the YMCA, baptisms in the pool (AB 065&ndash;072) → the Forest Hill trade (AB 074&ndash;078) → Houston Levee, Feb 2010 (AB 079&ndash;080) → the auditorium, <em>&ldquo;a dream come true, but it&rsquo;s not the dream&rdquo;</em> (AB 116&ndash;117). His <em>&ldquo;I&rsquo;m getting emotional&rdquo;</em> over selling Germantown Parkway (AB 053) is the movement&rsquo;s quiet moment.</li><li><b>Worship (Johnny):</b> Kids Life stage boxes to overseeing every location (JH 006&ndash;019); <em>&ldquo;We create space for God to create moments&rdquo;</em> (JH 038).</li><li><b>The TV years (Brian, next week):</b> the weekly program from 2008 is the script&rsquo;s &ldquo;influence in the city&rdquo; beat, which no one else covers.</li><li><b>Santiago (25 May 2014)</b> closes the movement as the bridge to a family of churches (JJ 008&ndash;019) &mdash; and Mundo&rsquo;s team met the Fuenteses on a mission trip (MM 089), so the Missions thread from Movement I runs straight into it.</li></ul>
+<p class="pr"><b>The pressure test&rsquo;s proof-point is now a fair test.</b> Rough-assemble this movement first: if six voices play as scenes, the structure holds; if they play as a staff roll-call, cut to three threads (Young People, Outreach, Buildings) and let Worship live in the Identity bridge.</p>
+<ul class="lst"><li><b>Script beats absorbed:</b> Growth 2002&ndash;2008 · Going Multi-Site · Axis Conference · Serve Trucks · Santiago · Houston Levee · (Zoe &mdash; Leslie&rsquo;s, still missing).</li></ul>
+<h3 class="sec">IV · Family &mdash; pastors to pastors, 2017&ndash;2021 · owns <b>Diversity</b> and <b>Leadership</b> · ~15%</h3>
+<p class="pr">Two couples who ran their own churches asked John and Leslie to be <em>their</em> pastors before anything merged &mdash; Wayne&rsquo;s email (WC 029&ndash;031), Emy&rsquo;s dream (EV 004) &mdash; and the value the film keeps naming is covering, not expansion: <em>&ldquo;they don&rsquo;t micromanage. They&rsquo;re not territorial&rdquo;</em> (EV 098). Diversity&rsquo;s most articulate voice is Wayne (<em>Black Fist White Knuckles</em>, WC 074&ndash;078, and the podcast it birthed, <em>Leadership in Black and White</em>, WC 079&ndash;090). <b>COVID ends the movement, and now has its Memphis side:</b> the church moves online in a week and John hosts daily livestream updates so that no one is left uncared for (Brian, next week); the drive-through food lines (MM 022&ndash;030); Santiago the weekend it shut (WC 062&ndash;066); Easter from an office in New York (WC 070).</p>
+<ul class="lst"><li><b>Repetition risk:</b> Dan, Emy and Wayne all met John at ARC. Tell one (Wayne&rsquo;s) and montage the others.</li><li><b>Script beats absorbed:</b> New York Merge · COVID (pictures, online content, growth).</li></ul>
+<h3 class="sec">V · Just Getting Started &mdash; the founding story, again, 2020&ndash;2027 · owns <b>Vision</b> · ~25%</h3>
+<p class="pr">Cut to rhyme: Florence&rsquo;s ninety people in an unheated lemon house against the Home Builders hall; Fitchburg&rsquo;s eviction-then-building and Santiago&rsquo;s storm-then-Ritz against the Mega Market; Johannesburg&rsquo;s sixteen people and 1,000 rand (AL 040) against Memphis&rsquo;s seven. Adrian says it outright &mdash; <em>&ldquo;God did the same miracle twice&rdquo;</em> (AL 136). Then the script&rsquo;s own closing beats, which now have voices: <b>the new building</b> (Adam: the Global Hub, ground broken August 2026, finishing about September 2027, AB 148&ndash;165) and <b>the new Bible School</b> (Adrian: John&rsquo;s Nashville mandate, 400 students in 11 countries in year one, AL 148&ndash;155). Then the roll-call &mdash; including the Nashville, DC and prison pickups &mdash; and <b>the circle closes</b>: Nairobi Lighthouse joining the family (MM 120&ndash;122), the payoff of <em>&ldquo;200 times over&rdquo;</em> (MM 076), with Don&rsquo;s blessing (DM 094) and the script&rsquo;s line for John and Leslie, <em>&ldquo;we feel we are just getting started&rdquo;</em> (theirs to say on 8 October).</p>
+<ul class="lst"><li><b>Values shown, second time around:</b> Vision &mdash; <em>&ldquo;a church in Europe for the kids of our kids&rdquo;</em> (MT 130); Emy&rsquo;s <em>&ldquo;30 locations in 30 years&rdquo;</em>; Adrian&rsquo;s intercontinental hub and ten churches in Africa (AL 207&ndash;212). Faith in crisis &mdash; Emy&rsquo;s cancer, Marco&rsquo;s COVID false start. Young People &mdash; Axis in Fitchburg, six to 185 (EV 049). Community &mdash; <em>&ldquo;We don&rsquo;t feel alone anymore&rdquo;</em> (MT 114). Outreach &mdash; the township community center in Johannesburg (AL 220&ndash;226; MM 094&ndash;095).</li><li><b>Script beats absorbed:</b> Crazy Expansion · The Unfolding Picture of Locations (montage) · Future (new building, new Bible School).</li></ul>
+<h3 class="sec">Where the six &ldquo;Features&rdquo; land</h3>
+<div class="tw"><table><thead><tr><th>Feature (script §IV)</th><th>Origin (Movements I&ndash;II)</th><th>Echo (Movements III&ndash;V)</th></tr></thead><tbody><tr><td>Worship</td><td>John on guitar in Nairobi and at the Home Builders (DM 015, RC 002)</td><td>Johnny&rsquo;s arc (JH 006&ndash;046); Axis Conference worship (PV)</td></tr><tr><td>Creativity</td><td>Leslie&rsquo;s calligraphy (DM 014); tube TVs up backyard ramps (PK 027&ndash;028)</td><td>Axis openers (PV 076&ndash;087); Wayne&rsquo;s docuseries (WC 074&ndash;078) and podcast (WC 079&ndash;090); Florence inflatables (MT 057)</td></tr><tr><td>Preaching</td><td><em>&ldquo;tremendous in teaching the Word&rdquo;</em> (DM 015)</td><td>Parker, Wayne, Emy; the Bible School (AL 129&ndash;155)</td></tr><tr><td>Young People</td><td>Kids Life in the kitchen (PK); <em>&ldquo;Kids Life explode&rdquo;</em> (RC 017)</td><td>Axis 2004 → 2,000 (DL, PV); <em>&ldquo;the backbone of our church&rdquo;</em> (PV 111); Axis in Fitchburg (EV 049)</td></tr><tr><td>Diversity</td><td>Forty tribes (DM 032&ndash;034); <em>&ldquo;a multicultural church&rdquo;</em> (RC 022)</td><td><em>Black Fist White Knuckles</em> (WC 074&ndash;078); eight countries in the Ritz congregation, Peru to Nigeria (JJ 031); Joburg&rsquo;s melting pot in a country of eleven official languages (AL 030&ndash;031)</td></tr><tr><td>Vision</td><td><em>&ldquo;we have found the city&rdquo;</em> (DM 064); <em>&ldquo;not reaching far enough&rdquo;</em> (RC 019)</td><td><em>&ldquo;200 times over&rdquo;</em> (MM 076); the Global Hub (AB 147); <em>&ldquo;the same miracle twice&rdquo;</em> (AL 136)</td></tr><tr><td>Outreach <em>(the script&rsquo;s &ldquo;possible addition&rdquo;)</em></td><td>pre-launch outreach, adopt-a-block (MM 002&ndash;007)</td><td>Serve Trucks (MM 050&ndash;075); COVID lines (MM 022&ndash;030); Serve Day, 2,000 teens (PV 088&ndash;090)</td></tr></tbody></table></div>
+<hr class="rule">
+</div></section>
+<section class="major"><div class="wrap"><h2 class="sec-major">What this changes in the script, concretely</h2>
+<ul class="lst"><li><b>Shrink §IV Features to an Identity bridge (3&ndash;4 min), don&rsquo;t delete it.</b> The values are <em>shown</em> inside the movements; the bridge <em>states</em> them once, plainly &mdash; and Outreach earns a slot there now that Mundo is on film. Keep the framing question as John&rsquo;s VO into it.</li><li><b>Move §III The Unfolding Picture of Locations into that bridge</b>, so every campus &mdash; domestic, international, Nashville, DC, the prisons &mdash; is named and seen, and Movement V&rsquo;s montage carries only the story locations.</li><li><b>Retire §V Interviews as a block, but pin ten witnesses:</b> Lisa (1996), Steve (1998), Jane (1999), the Sullivans (2002), the VanBlaricoms or Meneses (2005), Dwayne (2010), Kaymen (2014), Bella (2019), Yunna (2020), Travis Yu (2024). They are the only member voices in Movement III.</li><li><b>Plant and pay off the Nairobi word.</b> John tells <em>&ldquo;200 times over&rdquo;</em> in Movement I; the film ends on Nairobi Lighthouse joining the family. That is the strongest ending on film, and it is already true.</li><li><b>Keep the bookends as written:</b> the Intro VO, now over the scene shot for it (entering the building, the green room, the team, the morning&rsquo;s service flows; see <em>Intro</em> above), and the Future sit-down.</li></ul>
+<hr class="rule">
+</div></section>
+<section class="major"><div class="wrap"><h2 class="sec-major">Pressure test &mdash; five lenses, one verdict (17 September; updated)</h2>
+<p class="pr">A blind panel (advocate, skeptic, realist, audience, best-alternative) tested the first draft:</p>
+<ul class="lst"><li><b>Strongest point in favour:</b> the material is already chronological and the 30 Stories clips are cut one per year, so pinning them <em>reduces</em> work; the origin/echo rhyme gives the last act an argument.</li><li><b>Strongest objection:</b> coverage clumped at both ends, the longest movement had the least film, and deleting Features removed the one place the values are said out loud.</li><li><b>The audience risk:</b> a member at a campus with no interview checks one thing &mdash; <em>do I exist in this story</em> &mdash; which is why the roll-call moves into the bridge and the Nashville/DC/prison pickups are planned.</li><li><b>The realist&rsquo;s clock:</b> rough cut 30 September, one editor who is also shooting.</li></ul>
+<p class="pr"><b>Verdict: RESHAPE</b> &mdash; keep the five movements and the rhyme (as kinship: <em>we are them</em>, never <em>they are behind us</em>), shrink Features to a bridge that names every campus, pin ten witnesses, and direct the John &amp; Leslie sit-down into the movements&rsquo; values. <b>Update, 25 September:</b> the objection that killed the middle is answered &mdash; Movement III has six voices &mdash; so the cheapest test is now also the fair one: <b>rough-assemble Movement III first.</b> A same-day check before that: grid the five movements × values and mark which cells already have a logged clip.</p>
+<hr class="rule">
+</div></section>
+<section class="major"><div class="wrap"><h2 class="sec-major">John &amp; Leslie &mdash; 8 October</h2>
+<p class="pr"><b>The brief</b> &mdash; <span class="src">Thirty Years in Their Words - Brief for John and Leslie.html</span> (+ <span class="src">.pdf</span>, and a private artifact). One card per interview: what each person talked about, and where their story meets John and Leslie&rsquo;s; a year-by-year map of who tells what on film; a tick-list of what only they can tell; and the three dates still to confirm (the Nairobi years, launch-Sunday attendance, the Collierville YMCA years). It follows the card rule in <span class="src">tools/README.md</span>: <b>no reveals.</b> Almost every interview ends with a tribute to them, and none of those words are in the brief. They are here instead.</p>
+<p class="pr"><b>Held back for the room &mdash; the tributes, verbatim</b> (for a reaction beat, or for John and Leslie to see first in the cut; ⟨i⟩ = speaker label inferred, listen first):</p>
+<ul class="lst"><li><b>Don Matheny:</b> <em>&ldquo;your heart has never changed. Your heart and passion have only increased&rdquo;</em> (094) · <em>&ldquo;I wouldn&rsquo;t say anything. I&rsquo;d be just crying&rdquo;</em> (093)</li><li><b>Pete &amp; Kristi:</b> Pete &mdash; <em>&ldquo;We would not be the people we are today if it wasn&rsquo;t for John and Leslie&hellip; in a way they&rsquo;re closer than family&rdquo;</em> (053) · Kristi &mdash; <em>&ldquo;who they are at home is who they are on stage&rdquo;</em> (049&ndash;050)</li><li><b>Rob Carter:</b> <em>&ldquo;I never met anyone in my life that had more courage and more conviction that standing still was the wrong thing to do&rdquo;</em> (023)</li><li><b>Johnny Hill:</b> <em>&ldquo;I&rsquo;ve seen them be consistent over 21 years&hellip; I&rsquo;ve seen them take the bruises&rdquo;</em> (058&ndash;059)</li><li><b>Dan Lord:</b> <em>&ldquo;Pastor Leslie, one of the most sincere people in the whole world&rdquo;</em> [101] · <em>&ldquo;I have a Pastor John on my shoulder&rdquo;</em> [102]</li><li><b>Wayne &amp; Classy:</b> Wayne &mdash; <em>&ldquo;Our lives are bigger, better, brighter... because of the Siebelings&rdquo;</em> (134) · Classy &mdash; <em>&ldquo;their marriage is a picture of how I want our marriage to be&rdquo;</em> (134&ndash;136)</li><li><b>Emy Vazquez:</b> <em>&ldquo;That&rsquo;s my pastor&hellip; and I&rsquo;m for him. And I got their back&rdquo;</em> (073) · <em>&ldquo;Pastor John makes me a better person&rdquo;</em> (103)</li><li><b>Josh &amp; Jessica:</b> Josh &mdash; <em>&ldquo;There isn&rsquo;t a public Pastor John and Pastor Leslie and a private&hellip;&rdquo;</em> [050&ndash;051] · Jessica ⟨i⟩ &mdash; <em>&ldquo;hubo una ganancia, no hubo una pérdida&rdquo;</em> [066]</li><li><b>Marco &amp; Tiina:</b> Marco &mdash; <em>&ldquo;They&rsquo;re like our heroes&rdquo;</em> [101] · Tiina &mdash; <em>&ldquo;We don&rsquo;t feel alone anymore&rdquo;</em> [114]</li><li><b>Adam Bartlett:</b> <em>&ldquo;I never have been the building guy for Pastor John&hellip; I&rsquo;ve always been Adam Bartlett&rdquo;</em> [173]</li><li><b>Mundo Meneses:</b> <em>&ldquo;they have never asked people to do something that they&rsquo;re not willing to do themselves&rdquo;</em> [112]</li><li><b>Parker VanBlaricom:</b> <em>&ldquo;they are in a lot of ways like spiritual parents to me&rdquo;</em> [137]</li><li><b>Adrian &amp; Leigh:</b> Adrian &mdash; <em>&ldquo;He&rsquo;s like the Mr. Miyagi of this whole movement&rdquo;</em> [178] · on Leslie, <em>&ldquo;that glue behind the scenes&rdquo;</em> [182]</li></ul>
+<p class="pr"><b>Must-gets, by movement</b> (the brief invites these gently; the harder versions stay here):</p>
+<div class="tw"><table><thead><tr><th>Movement</th><th>Must-get from John &amp; Leslie</th><th>Pairs with</th></tr></thead><tbody><tr><td>I Sent</td><td>The call to plant, their side; <b>&ldquo;200 times over&rdquo;</b> in John&rsquo;s words</td><td>DM 037&ndash;066; MM 076</td></tr><tr><td>II Planted</td><td>Why Memphis; launch Sunday; <em>the harder one:</em> the Sundays that halved and what nearly stopped them</td><td>RC 021; PK 021&ndash;023, 032&ndash;033</td></tr><tr><td>II Planted</td><td>Dino and the early friends; the 40-day fast and the billboard</td><td>nobody</td></tr><tr><td>III Multiplied</td><td>Katrina; the Serve Truck announcement; leaving Germantown Parkway; the prophecy of &ldquo;restless young men and women&rdquo;</td><td>DL 012; MM 074; AB 028; PV 112</td></tr><tr><td>III Multiplied</td><td>Zoe (Leslie); why television (2008)</td><td>Brian&rsquo;s segment</td></tr><tr><td>IV Family</td><td>Why say yes to other pastors &mdash; what covering means; COVID from Memphis and the daily updates; <em>the harder one:</em> carrying criticism (<em>&ldquo;the bullets they took,&rdquo;</em> DL 117; <em>&ldquo;take the bruises,&rdquo;</em> JH 059)</td><td>WC, EV</td></tr><tr><td>V Started</td><td>Nairobi Lighthouse joining; the Global Hub and the Bible School; <em>&ldquo;we feel we are just getting started&rdquo;</em></td><td>MM 120; AB 147; AL 151</td></tr></tbody></table></div>
+<hr class="rule">
+</div></section>
+<section class="major"><div class="wrap"><h2 class="sec-major">The strongest moments, by interview</h2>
+<p class="pr">Ranked inside each interview; block = Premiere block, ⟨i⟩ = label inferred.</p>
+<ul class="lst"><li><b>Matheny:</b> 094 the blessing · 064 / 119 <em>&ldquo;we&rsquo;re in Memphis, Tennessee&rdquo;</em> · 037 · 117 · 066 Dr. King.</li><li><b>Sciacchetano:</b> 047 Pete almost tearing up · 019 · 063 hot-tub baptisms · 002 · 027&ndash;028 the tube TVs and the backyard ramps.</li><li><b>Carter:</b> 019 · 022 <em>&ldquo;the buckle of the Bible Belt&rdquo;</em> · 011 the Mega Market · 005 Pastor Don&rsquo;s word ⟨i⟩ · 024.</li><li><b>Hill:</b> 062 <em>&ldquo;God saw all the way back then&rdquo;</em> · 058&ndash;059 · 006&ndash;009 &ldquo;Friend of God&rdquo; · 038 · 049.</li><li><b>Lord:</b> [090] the chant · [079] · [114] <em>&ldquo;pushing all the chips to the middle&rdquo;</em> · [109] <em>&ldquo;next man up&rdquo;</em> · [067] the bleachers.</li><li><b>Francis:</b> 134 · 047 · 100 <em>&ldquo;it actually felt like home&rdquo;</em> · 022 · 063 Ground Zero.</li><li><b>Vazquez:</b> 127&ndash;128 the restoration plan · 148&ndash;149 Joseph of Arimathea · 036 · 136&ndash;137 · 073.</li><li><b>Fuentes:</b> [066] Jessica (subtitled) · [051] · [027] the Ritz · [035] Jessica&rsquo;s volunteers ⟨i⟩ · [018].</li><li><b>Geraci:</b> [054&ndash;055] 90 people, seven saved · [016] <em>&ldquo;we&rsquo;ve come home&rdquo;</em> · [101] · [069] 226 · [028] the first hug.</li><li><b>Bartlett:</b> [173] · [053] <em>&ldquo;I&rsquo;m getting emotional&rdquo;</em> · [116&ndash;117] · [070] baptisms in the YMCA pool · [028].</li><li><b>Meneses:</b> [074&ndash;075] the first truck, $75,000 · [076] <em>&ldquo;200 times over&rdquo;</em> · [120&ndash;121] Nairobi joining · [025] · [088] Joyce Meyer over the fence.</li><li><b>VanBlaricom:</b> [011] the altar call · [025&ndash;028] his first prayer out loud · [126] the name badge · [047&ndash;049] Starbucks · [142].</li><li><b>Wright:</b> [136] <em>&ldquo;the same miracle twice&rdquo;</em> · [082] Leigh &mdash; <em>&ldquo;if we turn away from this, we&rsquo;ll be turning away from something that God is trying to do&rdquo;</em> · [057] <em>&ldquo;tempted to settle&rdquo;</em> · [094] <em>&ldquo;how quickly can we do this?&rdquo;</em> · [178] Mr. Miyagi.</li></ul>
+<hr class="rule">
+</div></section>
+<section class="major"><div class="wrap"><h2 class="sec-major">Risks and open questions</h2>
+<ul class="lst"><li><b>Movement III crowding.</b> Six voices, all staff. One owner per thread; pin the 30 Stories members.</li><li><b>Chronology can flatten into &ldquo;and then.&rdquo;</b> The defence is the rhyme and now the Nairobi circle.</li><li><b>Three ARC meetings</b> (Dan, Emy, Wayne). One full telling, two glimpses.</li><li><b>Subtitles.</b> Jessica answers largely in Spanish; her transcript carries it verbatim.</li><li><b>A line asked off the record, on the record.</b> Kristi (PK 056 ⟨i⟩) asks that her &ldquo;superstar pastors&hellip; they fall&rdquo; remark stay out; Brian agrees on film (057). Brian&rsquo;s standing rule: nothing is gated &mdash; noted so it is a decision, not an accident.</li><li><b>Numbers that are Brian&rsquo;s, not the subject&rsquo;s:</b> the &ldquo;100 people → 20, 25,000&rdquo; line in Matheny&rsquo;s session is the interviewer&rsquo;s. Florence&rsquo;s &ldquo;2,076&rdquo; is said as <em>&ldquo;two thousand seventy-six&rdquo;</em> (MT 070) and <em>&ldquo;2000 and 76&rdquo;</em> (MT 071).</li><li><b>Figures that disagree on film:</b> Mundo&rsquo;s food-insecurity rates (MM 055 vs 058); the Wrights&rsquo; land size (AL 208&ndash;219 &mdash; &ldquo;forty five acres&rdquo; is the clean line); Josh&rsquo;s three &ldquo;years portable&rdquo; figures; Dan&rsquo;s first Axis Conference worked out on camera (2009, confirmed by Parker).</li><li><b>Transcript hygiene.</b> &ldquo;Life.Church&rdquo; is normalised out of the ten 17&ndash;25 Sep transcripts but still in the Matheny and Vazquez bodies; &ldquo;access&rdquo; → Axis wherever it is the ministry (every one of Parker&rsquo;s 82; <em>not</em> Mundo&rsquo;s one ordinary &ldquo;access&rdquo;); &ldquo;Siebling&rdquo; → Siebeling; Emy&rsquo;s student ministry is <b>Axis</b>, not &ldquo;Access.&rdquo; Whisper&rsquo;s lowercase-unpunctuated stretches were re-run with a primed prompt for the Wrights, Parker and Mundo (new <span class="src">tools/whisper_flat_spans.py</span>); Sciacchetano ~022&ndash;046, Geraci ~044&ndash;099, Dan Lord 001&ndash;008 and Vazquez ~039&ndash;043 still have them &mdash; the same fix would clean those in an hour of CPU. Premiere&rsquo;s FIND keys keep whatever Premiere heard.</li></ul>
+<hr class="rule">
+</div></section>
+<section class="major"><div class="wrap"><h2 class="sec-major">Next steps</h2>
+<ul class="lst check"><li><label><input type="checkbox" data-ck="ck-0-0"><span>Brian: react to the updated shape &mdash; especially the Nairobi circle as the ending</span></label></li><li><label><input type="checkbox" data-ck="ck-0-1"><span>Rough-assemble Movement III first (the fair test now) and grid movements × values</span></label></li><li><label><input type="checkbox" data-ck="ck-0-2"><span>8 Oct: John &amp; Leslie &mdash; give them the brief; hold the tributes above; get &ldquo;200 times over&rdquo; and Nairobi Lighthouse in their words</span></label></li><li><label><input type="checkbox" data-ck="ck-0-3"><span>Intro scene for John&rsquo;s VO: entering the building, the green room, the team, the morning&rsquo;s service flows; keep rolling through the prayer and the walk into service</span></label></li><li><label><input type="checkbox" data-ck="ck-0-4"><span>Brian&rsquo;s self-interview (TV program 2008&ndash;2018, the March 2020 flip, the daily updates) → transcribe (single voice: Whisper + Premiere, no diarizer)</span></label></li><li><label><input type="checkbox" data-ck="ck-0-5"><span>Short pickups: Shaston &amp; Kendall Hunter (Nashville), Andreas &amp; Jerrica Nunley (DC), Matt Anzivino (prison locations) &mdash; cards built</span></label></li><li><label><input type="checkbox" data-ck="ck-0-6"><span>Decide on Dino Rizzo and Leslie-on-Zoe, or give both beats to the 8 October sit-down</span></label></li><li><label><input type="checkbox" data-ck="ck-0-7"><span>Optional: re-run the flat stretches in the four older transcripts</span></label></li><li><label><input type="checkbox" data-ck="ck-0-8"><span>Confirm on-screen spellings: Siebeling, Streitmatter, Sciacchetano, Tiina, Vazquez, VanBlaricom, Hodgetts</span></label></li></ul>
+</div></section>
+
+<div class="psalm"><div class="wrap narrow"><p class="psalm-body">The righteous will flourish
+like a palm tree, they will grow like a cedar of Lebanon; planted in the house of the Lord, they will
+flourish in the courts of our God. They will still bear fruit in old age, they will stay fresh and
+green, proclaiming, &ldquo;The Lord is upright; he is my Rock, and there is no wickedness in him.&rdquo;</p>
+<p class="psalm-ref">Psalm 92 &nbsp;&middot;&nbsp; 12&ndash;14</p></div></div>
+
+<footer><div class="wrap"><span>The Life Church &middot; Memphis, TN</span>
+<span>Thirty Years, Told in Order</span>
+<span>Anniversary 11 &middot; 08</span></div></footer>
+
+<div class="bar"><div class="wrap">
+<span class="cnt k"><b id="cd">0</b>done</span>
+<span class="cnt"><b id="cr">0</b>remaining of 9</span>
+<span class="cnt lbl">must-get checklist</span>
+<span class="sp">
+<button type="button" id="btn-reset">Reset checklist</button>
+</span>
+</div></div>
+
+<script>
+(function(){
+  var KEY = "doc-structure-2026-09-25";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('input[data-ck]'));
+  if (!boxes.length) { var b=document.querySelector('.bar'); if(b) b.style.display='none'; return; }
+  var store = {};
+  try { store = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch(e) { store = {}; }
+  function paint(){
+    var n = 0;
+    boxes.forEach(function(x){
+      if (store[x.dataset.ck]) { x.checked = true; }
+      if (x.checked) { n++; x.closest('li').classList.add('done'); }
+      else { x.closest('li').classList.remove('done'); }
+    });
+    document.getElementById("cd").textContent = n;
+    document.getElementById("cr").textContent = boxes.length - n;
+  }
+  boxes.forEach(function(x){
+    x.addEventListener("change", function(){
+      if (x.checked) store[x.dataset.ck] = 1; else delete store[x.dataset.ck];
+      try { localStorage.setItem(KEY, JSON.stringify(store)); } catch(e) {}
+      paint();
+    });
+  });
+  document.getElementById("btn-reset").addEventListener("click", function(){
+    if (!confirm("Clear every tick on this checklist?")) return;
+    store = {};
+    boxes.forEach(function(x){ x.checked = false; });
+    try { localStorage.setItem(KEY, JSON.stringify(store)); } catch(e) {}
+    paint();
+  });
+  paint();
+})();
+</script>
+</body></html>
